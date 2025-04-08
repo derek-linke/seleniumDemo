@@ -1,0 +1,165 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-03-31T16:43:56.723Z",
+    "end": "2025-03-31T16:43:59.463Z",
+    "duration": 2740,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04bc8b10-1602-4602-8e52-9b95dc1bbd2e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f4b44614-28e1-4b47-a5fd-a8c63d5a3450",
+          "title": "Test add todo tests - secondTest",
+          "fullFile": "C:\\Workspace\\seleniumDemo\\test\\secondTest.js",
+          "file": "\\test\\secondTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test add todo - secondTest",
+              "fullTitle": "Test add todo tests - secondTest Test add todo - secondTest",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "// Launch the browser\n        // let driver = await new Builder().forBrowser(\"chrome\").build();\n        //  let driver = await new Builder().setChromeOptions(new chrome.Options().headless()).Build();\n        const options = new chrome.Options().headless();\n        let driver = await new Builder().forBrowser(\"chrome\").setChromeOptions(options).build();\n        // Launch the browser\n        //let driver = await new Builder().forBrowser(\"chrome\").setChromeOptions(options).build();\n        //let driver = await new Builder().forBrowser(\"chrome\").setChromeOptions(new chrome.Options().headless()).build();\n        //driver.setChromeOptions(new chrome.Options().headless());\n        //navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n        //add a todo\n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(\"Sel Test\", Key.RETURN);\n        // assert using Node js assertions\n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText();\n        //assert using chai should\n        todoText.should.equal(\"Sel Test\")\n        //close browser\n        await driver.quit();",
+              "err": {
+                "message": "ReferenceError: chrome is not defined",
+                "estack": "ReferenceError: chrome is not defined\n    at Context.<anonymous> (test\\secondTest.js:13:25)\n    at process.processImmediate (node:internal/timers:491:21)",
+                "diff": null
+              },
+              "uuid": "908b8aa4-5ecb-475e-b711-94195518cca8",
+              "parentUUID": "f4b44614-28e1-4b47-a5fd-a8c63d5a3450",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "908b8aa4-5ecb-475e-b711-94195518cca8"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "ecd272a9-3883-44d7-a1c0-e0bddcd941ee",
+          "title": "Test add todo tests - thirdTest",
+          "fullFile": "C:\\Workspace\\seleniumDemo\\test\\thirdTest.js",
+          "file": "\\test\\thirdTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test add todo - thirdTest",
+              "fullTitle": "Test add todo tests - thirdTest Test add todo - thirdTest",
+              "timedOut": false,
+              "duration": 1415,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Set expected value\n        let expectedValue = \"Selenium Test\"\n        // Launch the browser\n        //let driver = await new Builder().forBrowser(\"chrome\").build();\n        //let driver = await new Builder().setChromeOptions(new chrome.Options().headless()).Build();\n        // Launch the browser\n        let driver = await new Builder().forBrowser(\"chrome\").build();\n        //let driver = await new Builder().forBrowser(\"chrome\").setChromeOptions(new chrome.Options().headless()).build();\n        //driver.setChromeOptions(new chrome.Options().headless());\n        //navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n        //add a todo\n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(expectedValue, Key.RETURN);\n        // assert using Node js assertions\n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText();\n        //assert using chai should\n        todoText.should.equal(expectedValue)\n        //close browser\n        await driver.quit();",
+              "err": {},
+              "uuid": "ceb4ff7a-ba14-42b6-9e7c-7216fb8b0b8c",
+              "parentUUID": "ecd272a9-3883-44d7-a1c0-e0bddcd941ee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test add todo - fourthTest - for reporting ",
+              "fullTitle": "Test add todo tests - thirdTest Test add todo - fourthTest - for reporting ",
+              "timedOut": false,
+              "duration": 1311,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Set expected value\n        let expectedValue = \"Selenium Test\"\n        // Launch the browser\n        //let driver = await new Builder().forBrowser(\"chrome\").build();\n        //let driver = await new Builder().forBrowser(\"chrome\").setChromeOptions(new chrome.Options().headless()).build();\n        // driver.setChromeOptions(new chrome.Options().headless());\n        // Launch the browser\n        let driver = await new Builder().forBrowser(\"chrome\").build();\n        //let driver = await new Builder().forBrowser(\"chrome\").setChromeOptions(new chrome.Options().headless()).build();\n        //driver.setChromeOptions(new chrome.Options().headless());\n        //navigate to our application\n        await driver.get(\"https://lambdatest.github.io/sample-todo-app/\");\n        //add a todo\n        await driver.findElement(By.id(\"sampletodotext\")).sendKeys(expectedValue, Key.RETURN);\n        // assert using Node js assertions\n        let todoText = await driver.findElement(By.xpath(\"//li[last()]\")).getText();\n        //assert using chai should\n        todoText.should.equal(expectedValue)\n        //close browser\n        await driver.quit();",
+              "err": {},
+              "uuid": "6c1e3202-120e-4159-9b76-116ef5623c0a",
+              "parentUUID": "ecd272a9-3883-44d7-a1c0-e0bddcd941ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ceb4ff7a-ba14-42b6-9e7c-7216fb8b0b8c",
+            "6c1e3202-120e-4159-9b76-116ef5623c0a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2726,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "/Workspace/seleniumDemo/TestReports",
+        "reportFilename": "[status]-[datetime]-[name]-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
